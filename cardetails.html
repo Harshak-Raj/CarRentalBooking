@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Details</title>
+    <style>
+        /* Styles for page layout */
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 20px;
+            padding-top: 100px;
+
+        }
+        .container {
+            padding-top: ;
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid black;
+        }
+        h2 {
+            color: #333;
+        }
+        /* Styles for book details */
+        .book-details {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .mobile-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .mobile-details th, .mobile-details td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .mobile-details th {
+            text-align: left;
+            color:black;
+        }
+        .mobile-details td {
+            vertical-align: top;
+        }
+        .back{
+            background-color:black ;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            margin-left: 260px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body style="background-image:url(backlogin.jpg)">
+<div class="container">
+    <h2><center>Car Details</center></h2>
+    <div class="mobile-details">
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <td th:text="Car">54515der22</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td th:text="${mobile.name}">Tata Nexon</td>
+            </tr>
+            <tr>
+                <th>Fuel Type</th>
+                <td th:text="${mobile.model}">Petrol</td>
+            </tr>
+            <tr>
+                <th>Rental Rate</th>
+                <td th:text="${mobile.os_version}">13/KM</td>
+            </tr>
+            <tr>
+                <th>Date of Purchase</th>
+                <td th:text="${mobile.storage}">24-10-2024</td>
+            </tr>
+            <tr>
+                <th>Type of Car</th>
+                <td th:text="${mobile.price}">Subcompact crossover SUV</td>
+            </tr>
+            <tr>
+                <th>KM Run</th>
+                <td>513</td>
+            </tr>
+        </table>
+    </div>
+    <p><a href="main.html" class="back">Back</a></p>
+</div>
+</body>
+</html>

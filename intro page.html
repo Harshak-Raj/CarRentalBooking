@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ray-Bay rentals</title>
+    <link rel="stylesheet" type="text/css" href="style5.css">
+    <script>
+        // Function to redirect to main.html upon form submission
+        function redirectToMain(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            window.location.href = "main.html"; // Redirect to main.html
+        }
+    </script>
+</head>
+<body>
+
+<h1>Ray-Bay Car Rentals</h1>
+
+<nav>
+    <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href=""><li>Order</li></a>
+        <a href=""><li>Nearby</li></a>
+        <a href="about.html"><li>About</li></a>
+        <a href="#"><li>Call Us</li></a>
+    </ul>
+</nav>
+
+<section class="booking">
+    <h2>Please check out the availability.....</h2>
+    <div class="form-container">
+        <form id="bookingForm" onsubmit="redirectToMain(event)">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            
+            <label for="place">Select Place:</label>
+            <input type="text" id="place" name="place" placeholder="Enter location" required><br><br>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

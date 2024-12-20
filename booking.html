@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image:url(bookingback.jpg);">
+    <header>
+        <h1>Car Rental Booking Portal</h1>
+    </header>
+
+    <section class="booking-form">
+        <h2>Book a Car</h2>
+        <form id="carBookingForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="carModel">Car Model:</label>
+            <select id="carModel" name="carModel" required>
+                <option value="" disabled selected>Select a car model</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="Convertible">Convertible</option>
+            </select>
+
+            <label for="pickupDate">Pickup Date:</label>
+            <input type="date" id="pickupDate" name="pickupDate" required>
+
+            <label for="returnDate">Return Date:</label>
+            <input type="date" id="returnDate" name="returnDate" required>
+
+            <label for="location">Pickup Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <div id="confirmationMessage" class="hidden">
+        <h3>Booking Confirmed!</h3>
+        <p>Thank you for booking with us, <span id="customerName"></span>! Your car <span id="carModelConfirm"></span> will be ready for pickup on <span id="pickupDateConfirm"></span> at <span id="locationConfirm"></span>.</p>
+    </div>
+
+    <!-- Floating Notification -->
+    <div id="floatingMessage" class="hidden">Car Booked!</div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
